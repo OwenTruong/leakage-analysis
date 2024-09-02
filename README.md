@@ -19,6 +19,11 @@ This is the tool of the ASE'22 paper: [Data Leakage in Notebooks: Static Detecti
 3. Build Docker image: ```docker build -t leakage-analysis .```
 4. Run Docker image: ```docker run -v /path/to/dir:/path/to/dir leakage-analysis /path/to/dir/$FILE -o```. All to-be-analyzed notebooks should be converted to Python files and stored in `/path/to/dir`.
 
+## How to run Docker compose
+1. Make sure Docker is installed.
+2. Copy `.env.example` file to a new `.env` file.
+3. Change the two path in `.env` to the path of the notebook directory, `HOST_NOTEBOOK_DIR`, to mount inside the container, and the filename of the python file, `FILE`, to be scanned. 
+
 ## How to read output
 For a given input file `test.py`, an output html file `test.html` will be generated if `-o` flag is specified. 
 

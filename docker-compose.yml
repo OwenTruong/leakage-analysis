@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  leakage-analysis:
+    build: .
+    volumes:
+      - ${HOST_NOTEBOOk_DIR}:/notebook
+    command: '/notebook/${FILE} -o'
